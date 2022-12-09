@@ -4,7 +4,7 @@ import Particles from "react-tsparticles";
 function ParticleBackground() {
   return (
     <Particles
-      className="particle-background"
+      style={{ zIndex: "-1" }}
       params={{
         particles: {
           number: {
