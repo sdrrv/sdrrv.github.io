@@ -1,4 +1,5 @@
 import ParticleBackground from "./assets/ParticleBackground";
+import ReactTypingEffect from "react-typing-effect";
 import "./App.scss";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <div className="App">
         <h1>Duarte Elvas</h1>
         <p className="read-the-docs">
-          New portfolio still under development, to see the old one
+          I am a <ReactTypingEffect text={["Software Engineer", "Developer"]} />
         </p>
         <div className="card">
           <button onClick={() => (window.location.href = oldPort)}>
