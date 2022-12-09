@@ -2,7 +2,7 @@ import ParticleBackground from "./assets/ParticleBackground";
 import "./App.scss";
 
 function App() {
-  const oldPort: string = "https://web.tecnico.ulisboa.pt/duartecelvas/";
+  const oldPort = "https://web.tecnico.ulisboa.pt/duartecelvas/";
 
   return (
     <>
