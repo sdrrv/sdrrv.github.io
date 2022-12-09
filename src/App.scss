@@ -9,6 +9,9 @@
   padding: 2em;
 }
 
-.read-the-docs {
+.description {
   color: #888;
+  &_titles {
+    color: rgba(255, 255, 255, 0.87);
+  }
 }
