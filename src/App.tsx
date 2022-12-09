@@ -4,7 +4,7 @@ import "./App.scss";
 
 function App() {
   const oldPort = "https://web.tecnico.ulisboa.pt/duartecelvas/";
-  const titles = ["Software Engineer", "Developer"];
+  const titles = ["Software Engineer", "Developer", "Game Developer"];
 
   return (
     <>
@@ -16,6 +16,10 @@ function App() {
           <b>
             {" "}
             <ReactTypingEffect
+              speed={100}
+              eraseSpeed={100}
+              typingDelay={1500}
+              eraseDelay={1500}
               text={titles}
               className="description_titles"
             />{" "}
