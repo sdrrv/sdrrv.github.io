@@ -1,6 +1,7 @@
 import ParticleBackground from "./assets/ParticleBackground";
 import ReactTypingEffect from "react-typing-effect";
 import "./App.scss";
+import { motion } from "framer-motion";
 
 function App() {
   const oldPort = "https://web.tecnico.ulisboa.pt/duartecelvas/";
@@ -10,8 +11,19 @@ function App() {
     <>
       <ParticleBackground />
       <div className="App">
-        <h1>Duarte Elvas</h1>
-        <p className="description">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.15, duration: 1 }}
+        >
+          Duarte Elvas
+        </motion.h1>
+        <motion.p
+          className="description"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.25, duration: 1 }}
+        >
           I am a{" "}
           <b>
             {" "}
@@ -24,7 +36,7 @@ function App() {
               className="description_titles"
             />{" "}
           </b>
-        </p>
+        </motion.p>
         <div className="card">
           <button onClick={() => (window.location.href = oldPort)}>
             Click here
