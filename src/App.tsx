@@ -2,6 +2,7 @@ import ParticleBackground from "./assets/ParticleBackground";
 import ReactTypingEffect from "react-typing-effect";
 import "./App.scss";
 import { motion } from "framer-motion";
+import Button from "./Components/Button/Button";
 
 function App() {
   const oldPort = "https://web.tecnico.ulisboa.pt/duartecelvas/";
@@ -37,11 +38,7 @@ function App() {
             />{" "}
           </b>
         </motion.p>
-        <div className="card">
-          <button onClick={() => (window.location.href = oldPort)}>
-            Click here
-          </button>
-        </div>
+        <Button> Click Me </Button>
       </div>
     </>
   );
