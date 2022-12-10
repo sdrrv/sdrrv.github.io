@@ -14,7 +14,7 @@ function App() {
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.15, duration: 1 }}
+          transition={{ delay: 0.15, duration: 1, type: "tween" }}
         >
           Duarte Elvas
         </motion.h1>
@@ -22,7 +22,7 @@ function App() {
           className="description"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.25, duration: 1 }}
+          transition={{ delay: 0.3, duration: 1, type: "tween" }}
         >
           I am a{" "}
           <b>
