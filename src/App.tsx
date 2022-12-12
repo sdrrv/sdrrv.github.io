@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 import Button from "./Components/Button/Button";
 
 function App() {
-  const oldPort = "https://web.tecnico.ulisboa.pt/duartecelvas/";
   const titles = ["Software Engineer", "Developer", "Game Developer"];
 
   return (
     <>
       <ParticleBackground />
-      <div className="App">
+      <div className="title">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -38,7 +37,17 @@ function App() {
             />{" "}
           </b>
         </motion.p>
-        <Button> ? </Button>
+      </div>
+      <div className="buttons">
+        <Button buttonType="empty">
+          <i className="bi-github" />
+        </Button>
+        <Button buttonType="empty">
+          <i className="bi-linkedin" />
+        </Button>
+        <Button buttonType="empty">
+          <i className="bi-joystick" />
+        </Button>
       </div>
     </>
   );

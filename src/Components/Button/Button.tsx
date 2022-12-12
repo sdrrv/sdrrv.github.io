@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.component.scss";
 
-type ButtonType = "normal" | "circle" | undefined;
+type ButtonType = "normal" | "circle" | "empty" | undefined;
 
 type ButtonProps = {
   children?: React.ReactNode;
@@ -12,6 +12,8 @@ type ButtonProps = {
 
 function typeChecker(type: ButtonType) {
   switch (type) {
+    case "empty":
+      return "empty";
     case "circle":
       return "circle";
     case "normal":

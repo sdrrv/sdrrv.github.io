@@ -1,8 +1,5 @@
-.card {
-}
-
 button {
-  margin: 2em;
+  margin: 1em;
   color: rgba(255, 255, 255, 0.87);
   border-radius: 8px;
   border: 1px solid transparent;
@@ -17,8 +14,15 @@ button {
 .circle {
   padding: 0;
   border-radius: 50%;
-  height: 3em;
-  width: 3em;
+  font-size: 1.5em;
+  height: 2em;
+  width: 2em;
+}
+.empty{
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 1.3em;
 }
 button:hover {
   border-color: #646cff;
