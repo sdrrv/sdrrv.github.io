@@ -1,8 +1,8 @@
 .card {
-  padding: 2em;
 }
 
 button {
+  margin: 2em;
   color: rgba(255, 255, 255, 0.87);
   border-radius: 8px;
   border: 1px solid transparent;
@@ -13,10 +13,12 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  .circle{
-    padding: 1.2em 1.2em;
-    border-radius: 50%;
-  }
+}
+.circle {
+  padding: 0;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
 }
 button:hover {
   border-color: #646cff;

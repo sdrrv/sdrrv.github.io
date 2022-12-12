@@ -1,22 +1,34 @@
 import React from "react";
 import "./Button.component.scss";
 
-type buttonType = "normal" | "circle";
+type ButtonType = "normal" | "circle" | undefined;
 
 type ButtonProps = {
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
-  buttonType?: buttonType;
+  buttonType?: ButtonType;
 };
 
-function Button({ children, className, onClick }: ButtonProps) {
+function typeChecker(type: ButtonType) {
+  switch (type) {
+    case "circle":
+      return "circle";
+    case "normal":
+    default:
+      return "";
+  }
+}
+
+function Button({ children, className, onClick, buttonType }: ButtonProps) {
   return (
-    <div className={"card " + className}>
-      <button type="button" onClick={onClick}>
-        {children}
-      </button>
-    </div>
+    <button
+      type="button"
+      onClick={onClick}
+      className={className + " " + typeChecker(buttonType)}
+    >
+      {children}
+    </button>
   );
 }
 
