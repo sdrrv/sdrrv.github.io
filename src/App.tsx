@@ -2,15 +2,16 @@ import ParticleBackground from "./assets/ParticleBackground";
 import ReactTypingEffect from "react-typing-effect";
 import "./App.scss";
 import { motion } from "framer-motion";
+import Button from "./Components/Button/Button";
+import PopupMenu from "./Components/PopupMenu/PopupMenu";
 
 function App() {
-  const oldPort = "https://web.tecnico.ulisboa.pt/duartecelvas/";
   const titles = ["Software Engineer", "Developer", "Game Developer"];
 
   return (
     <>
       <ParticleBackground />
-      <div className="App">
+      <div className="title">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -37,12 +38,57 @@ function App() {
             />{" "}
           </b>
         </motion.p>
-        <div className="card">
-          <button onClick={() => (window.location.href = oldPort)}>
-            Click here
-          </button>
-        </div>
       </div>
+      <motion.div
+        className="buttons"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 1.5, type: "tween" }}
+      >
+        <Button
+          buttonType="empty"
+          animationProps={{
+            initial: { x: -100 },
+            animate: { x: 0 },
+            transition: {
+              delay: 0.8,
+              duration: 0.8,
+              type: "tween",
+            },
+          }}
+        >
+          <i className="bi-github" />
+        </Button>
+        <Button
+          buttonType="empty"
+          animationProps={{
+            initial: { y: 100 },
+            animate: { y: 0 },
+            transition: {
+              delay: 0.8,
+              duration: 0.8,
+              type: "tween",
+            },
+          }}
+        >
+          <i className="bi-linkedin" />
+        </Button>
+        <Button
+          buttonType="empty"
+          animationProps={{
+            initial: { x: 100 },
+            animate: { x: 0 },
+            transition: {
+              delay: 0.8,
+              duration: 0.8,
+              type: "tween",
+            },
+          }}
+        >
+          <i className="bi-joystick" />
+        </Button>
+      </motion.div>
+      <PopupMenu />
     </>
   );
 }

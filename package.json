@@ -13,6 +13,8 @@
     "lint": "prettier --write . && eslint --fix"
   },
   "dependencies": {
+    "@types/node": "^18.11.13",
+    "bootstrap-icons": "^1.10.2",
     "framer-motion": "^7.6.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
