@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./PopupMenu.component.scss";
-import { motion, useCycle } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Button from "../Button/Button";
 
 type props = {
@@ -11,7 +11,7 @@ const iconVariants = {
   open: {
     rotate: 90,
     center: true,
-    //color: "#242424",
+    color: "#242424",
     scale: 1.3,
     x: -3,
     y: -2,
@@ -29,25 +29,40 @@ const iconVariants = {
 function PopupMenu({ className }: props) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 1.6, duration: 1, type: "tween" }}
-      className="container"
-    >
-      <Button
-        onClick={() => setIsOpen(!isOpen)}
-        buttonType="empty"
-        className="menu"
-        animationProps={{
-          animate: isOpen ? "open" : "closed",
-          variants: iconVariants,
-          transition: {},
-        }}
+    <>
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1.6, duration: 1, type: "tween" }}
+        className="container"
       >
-        <i className={isOpen ? "bi-x" : "bi-list"} />
-      </Button>
-    </motion.div>
+        <Button
+          onClick={() => setIsOpen(!isOpen)}
+          buttonType="empty"
+          className="menu"
+          animationProps={{
+            animate: isOpen ? "open" : "closed",
+            variants: iconVariants,
+            transition: {},
+          }}
+        >
+          <i className={isOpen ? "bi-x" : "bi-list"} />
+        </Button>
+      </motion.div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            className="navbar"
+            initial={{ y: -150 }}
+            animate={{ y: -20 }}
+            exit={{ y: -150 }}
+          >
+            <p style={{ color: "black" }}>Hello</p>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 
