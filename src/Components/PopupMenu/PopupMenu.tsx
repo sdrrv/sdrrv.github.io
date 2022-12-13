@@ -3,10 +3,6 @@ import "./PopupMenu.component.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../Button/Button";
 
-type props = {
-  className?: string;
-};
-
 const iconVariants = {
   open: {
     rotate: 90,
@@ -26,7 +22,7 @@ const iconVariants = {
   },
 };
 
-function PopupMenu({ className }: props) {
+function PopupMenu() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -43,7 +39,6 @@ function PopupMenu({ className }: props) {
           animationProps={{
             animate: isOpen ? "open" : "closed",
             variants: iconVariants,
-            transition: {},
           }}
         >
           <i className={isOpen ? "bi-x" : "bi-list"} />
@@ -54,9 +49,10 @@ function PopupMenu({ className }: props) {
         {isOpen && (
           <motion.nav
             className="navbar"
-            initial={{ y: -150 }}
-            animate={{ y: -20 }}
-            exit={{ y: -150 }}
+            initial={{ y: "-15vh" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-15vh" }}
+            transition={{ duration: 0.5, type: "tween" }}
           />
         )}
       </AnimatePresence>
