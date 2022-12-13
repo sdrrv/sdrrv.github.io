@@ -11,16 +11,23 @@ function PopupMenu({ className }: props) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   return (
-    <motion.nav
-      className={className}
-      initial={false}
-      animate={isOpen ? "open" : "closed"}
-      ref={containerRef}
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 1.6, duration: 1, type: "tween" }}
+      className="container"
     >
-      <Button buttonType="circle" className="menu">
-        <i className="bi-list" />
-      </Button>
-    </motion.nav>
+      <motion.nav
+        className={className}
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        ref={containerRef}
+      >
+        <Button buttonType="circle" className="menu">
+          <i className="bi-list" />
+        </Button>
+      </motion.nav>
+    </motion.div>
   );
 }
 
