@@ -33,7 +33,7 @@ function PopupMenu({ className }: props) {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1.6, duration: 1, type: "tween" }}
+        transition={{ delay: 1.5, duration: 0.8, type: "tween" }}
         className="container"
       >
         <Button
@@ -57,9 +57,7 @@ function PopupMenu({ className }: props) {
             initial={{ y: -150 }}
             animate={{ y: -20 }}
             exit={{ y: -150 }}
-          >
-            <p style={{ color: "black" }}>Hello</p>
-          </motion.nav>
+          />
         )}
       </AnimatePresence>
     </>
