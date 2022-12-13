@@ -1,5 +1,6 @@
 import React from "react";
 import "./Button.component.scss";
+import { AnimationProps, motion } from "framer-motion";
 
 type ButtonType = "normal" | "circle" | "empty" | undefined;
 
@@ -8,6 +9,7 @@ type ButtonProps = {
   className?: string;
   onClick?: () => void;
   buttonType?: ButtonType;
+  animationProps?: AnimationProps;
 };
 
 function typeChecker(type: ButtonType) {
@@ -22,15 +24,22 @@ function typeChecker(type: ButtonType) {
   }
 }
 
-function Button({ children, className, onClick, buttonType }: ButtonProps) {
+function Button({
+  children,
+  className,
+  onClick,
+  buttonType,
+  animationProps,
+}: ButtonProps) {
   return (
-    <button
+    <motion.button
+      {...animationProps}
       type="button"
       onClick={onClick}
       className={className + " " + typeChecker(buttonType)}
     >
       {children}
-    </button>
+    </motion.button>
   );
 }
 

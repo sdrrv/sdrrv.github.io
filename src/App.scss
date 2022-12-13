@@ -7,9 +7,10 @@
   flex-direction: column;
 }
 
-
 .title {
-  margin: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  align-self: center;
   .description {
     color: #888;
 
@@ -19,8 +20,7 @@
   }
 }
 
-.buttons{
+.buttons {
   display: flex;
   justify-content: center;
-
 }

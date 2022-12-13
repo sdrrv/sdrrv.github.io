@@ -38,17 +38,58 @@ function App() {
           </b>
         </motion.p>
       </div>
-      <div className="buttons">
-        <Button buttonType="empty">
+      <motion.div
+        className="buttons"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 1, type: "tween" }}
+      >
+        <Button
+          buttonType="empty"
+          animationProps={{
+            initial: { x: -30 },
+            animate: { x: 0 },
+            transition: {
+              delay: 0.8,
+              duration: 2,
+              type: "spring",
+              stiffness: 500,
+            },
+          }}
+        >
           <i className="bi-github" />
         </Button>
-        <Button buttonType="empty">
+        <Button
+          buttonType="empty"
+          animationProps={{
+            initial: { y: 30 },
+            animate: { y: 0 },
+            transition: {
+              delay: 0.8,
+              duration: 2,
+              type: "spring",
+              stiffness: 500,
+            },
+          }}
+        >
           <i className="bi-linkedin" />
         </Button>
-        <Button buttonType="empty">
+        <Button
+          buttonType="empty"
+          animationProps={{
+            initial: { x: 30 },
+            animate: { x: 0 },
+            transition: {
+              delay: 0.8,
+              duration: 2,
+              type: "spring",
+              stiffness: 500,
+            },
+          }}
+        >
           <i className="bi-joystick" />
         </Button>
-      </div>
+      </motion.div>
     </>
   );
 }
