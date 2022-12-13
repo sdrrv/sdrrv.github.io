@@ -47,13 +47,13 @@ function App() {
         <Button
           buttonType="empty"
           animationProps={{
-            initial: { x: -30 },
+            initial: { x: -100 },
             animate: { x: 0 },
             transition: {
               delay: 0.8,
-              duration: 2,
+              duration: 0.5,
               type: "spring",
-              stiffness: 500,
+              stiffness: 200,
             },
           }}
         >
@@ -62,13 +62,13 @@ function App() {
         <Button
           buttonType="empty"
           animationProps={{
-            initial: { y: 30 },
+            initial: { y: 100 },
             animate: { y: 0 },
             transition: {
               delay: 0.8,
-              duration: 2,
+              duration: 0.5,
               type: "spring",
-              stiffness: 500,
+              stiffness: 200,
             },
           }}
         >
@@ -77,13 +77,13 @@ function App() {
         <Button
           buttonType="empty"
           animationProps={{
-            initial: { x: 30 },
+            initial: { x: 100 },
             animate: { x: 0 },
             transition: {
               delay: 0.8,
-              duration: 2,
+              duration: 0.5,
               type: "spring",
-              stiffness: 500,
+              stiffness: 200,
             },
           }}
         >
