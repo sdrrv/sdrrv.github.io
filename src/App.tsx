@@ -3,6 +3,7 @@ import ReactTypingEffect from "react-typing-effect";
 import "./App.scss";
 import { motion } from "framer-motion";
 import Button from "./Components/Button/Button";
+import PopupMenu from "./Components/PopupMenu/PopupMenu";
 
 function App() {
   const titles = ["Software Engineer", "Developer", "Game Developer"];
@@ -42,7 +43,7 @@ function App() {
         className="buttons"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 1, type: "tween" }}
+        transition={{ delay: 0.7, duration: 1.5, type: "tween" }}
       >
         <Button
           buttonType="empty"
@@ -51,9 +52,8 @@ function App() {
             animate: { x: 0 },
             transition: {
               delay: 0.8,
-              duration: 0.5,
-              type: "spring",
-              stiffness: 200,
+              duration: 0.8,
+              type: "tween",
             },
           }}
         >
@@ -66,9 +66,8 @@ function App() {
             animate: { y: 0 },
             transition: {
               delay: 0.8,
-              duration: 0.5,
-              type: "spring",
-              stiffness: 200,
+              duration: 0.8,
+              type: "tween",
             },
           }}
         >
@@ -81,15 +80,15 @@ function App() {
             animate: { x: 0 },
             transition: {
               delay: 0.8,
-              duration: 0.5,
-              type: "spring",
-              stiffness: 200,
+              duration: 0.8,
+              type: "tween",
             },
           }}
         >
           <i className="bi-joystick" />
         </Button>
       </motion.div>
+      <PopupMenu />
     </>
   );
 }
