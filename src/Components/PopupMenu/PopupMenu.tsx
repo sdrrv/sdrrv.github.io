@@ -6,7 +6,6 @@ import Button from "../Button/Button";
 const iconVariants = {
   open: {
     rotate: 90,
-    center: true,
     color: "#242424",
     scale: 1.3,
     x: -3,
@@ -14,7 +13,6 @@ const iconVariants = {
   },
   closed: {
     rotate: 0,
-    center: true,
     color: "rgba(255, 255, 255, 0.87)",
     scale: 1,
     x: 0,
