@@ -7,7 +7,7 @@
 .container {
   position: fixed;
   top:7vh;
-  left: 70px;
+  left: 5vw;
   z-index: 6;
   display: flex;
   justify-content: center;
@@ -23,8 +23,8 @@
   left: 0;
   right: 0;
   height: 14vh;
+  border-radius: 0 0 10px 10px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 5;
 }
 
