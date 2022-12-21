@@ -1,16 +1,14 @@
-import ParticleBackground from "./assets/ParticleBackground";
-import ReactTypingEffect from "react-typing-effect";
-import "./App.scss";
+import React from "react";
+import "./WelcomePage.component.scss";
 import { motion } from "framer-motion";
-import Button from "./Components/Button/Button";
-import PopupMenu from "./Components/PopupMenu/PopupMenu";
+import ReactTypingEffect from "react-typing-effect";
+import Button from "../Button/Button";
 
-function App() {
-  const titles = ["Software Engineer", "Developer", "Game Developer"];
+const titles = ["Software Engineer", "Developer", "Game Developer"];
 
+function WelcomePage() {
   return (
-    <>
-      <ParticleBackground />
+    <div className="welcome-page">
       <div className="title">
         <motion.h1
           initial={{ opacity: 0 }}
@@ -88,9 +86,8 @@ function App() {
           <i className="bi-joystick" />
         </Button>
       </motion.div>
-      <PopupMenu />
-    </>
+    </div>
   );
 }
 
-export default App;
+export default WelcomePage;
