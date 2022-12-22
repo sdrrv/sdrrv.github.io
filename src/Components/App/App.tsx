@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       <ParticleBackground />
-      <section>
-        <WelcomePage />
-      </section>
+      <WelcomePage />
+      <WelcomePage />
+      <WelcomePage />
       <PopupMenu />
     </>
   );
