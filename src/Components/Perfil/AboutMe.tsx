@@ -6,7 +6,9 @@ function AboutMe() {
     <section>
       <div className="about-me">
         <div className="about-me_text">
-          <h2>About me</h2>
+          <h2>
+            About me <i className="bi-file-person-fill" />
+          </h2>
         </div>
         <img className="about-me_image" src={selfImage} alt="It's me!" />
       </div>
