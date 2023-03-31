@@ -1,0 +1,20 @@
+.about-me {
+  display: flex;
+  justify-content: space-around;
+  width: 70vw;
+  &_image {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: auto;
+    height: 70vh;
+    object-fit: cover;
+  }
+  &_text {
+    height: auto;
+    width: 40%;
+    p {
+      font-size: 1.1em;
+      line-height: 1.3;
+    }
+  }
+}
