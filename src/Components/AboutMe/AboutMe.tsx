@@ -23,12 +23,13 @@ function AboutMe() {
             <a href="https://tecnico.ulisboa.pt/en/">
               Instituto Superior Técnico.
             </a>
+            <i>🎓</i>
           </p>
           <p>
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             I'm a <b>cheerful person</b>, <b>motivated</b> and with great{" "}
-            <b>ease in working with a team</b>. <br /> I learn and adapt quickly
-            to any situation, making me an ideal worker/co-worker.
+            <b>ease in working with a team</b>. <br /> I can also learn and
+            adapt quickly to any situation.
           </p>
         </div>
 

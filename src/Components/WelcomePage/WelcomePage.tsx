@@ -4,9 +4,12 @@ import { motion } from "framer-motion";
 import ReactTypingEffect from "react-typing-effect";
 import Button from "../Button/Button";
 
-const titles = ["Software Engineer", "Developer", "Game Developer"];
+const titles = ["Software Engineer", "Developer", "Game Developer", "Student"];
 
 function WelcomePage() {
+  function handleRedirect(url: string) {
+    window.open(url);
+  }
   return (
     <section>
       <div className="welcome-page">
@@ -55,6 +58,7 @@ function WelcomePage() {
                 type: "tween",
               },
             }}
+            onClick={() => handleRedirect("https://github.com/sdrrv")}
           >
             <i className="bi-github" />
           </Button>
@@ -69,6 +73,9 @@ function WelcomePage() {
                 type: "tween",
               },
             }}
+            onClick={() =>
+              handleRedirect("https://www.linkedin.com/in/duartecelvas/")
+            }
           >
             <i className="bi-linkedin" />
           </Button>
@@ -83,6 +90,7 @@ function WelcomePage() {
                 type: "tween",
               },
             }}
+            onClick={() => handleRedirect("https://sdrrv.itch.io/")}
           >
             <i className="bi-joystick" />
           </Button>
