@@ -61,11 +61,13 @@ function WelcomePage({ nextReference }: welcomePageProps) {
             buttonType="empty"
             animationProps={{
               initial: { x: -100 },
-              animate: { x: 0 },
-              transition: {
-                delay: 0.8,
-                duration: 0.8,
-                type: "tween",
+              animate: {
+                x: 0,
+                transition: {
+                  delay: 0.8,
+                  duration: 0.8,
+                  type: "tween",
+                },
               },
             }}
             onClick={() => handleRedirect("https://github.com/sdrrv")}
@@ -76,11 +78,13 @@ function WelcomePage({ nextReference }: welcomePageProps) {
             buttonType="empty"
             animationProps={{
               initial: { y: 100 },
-              animate: { y: 0 },
-              transition: {
-                delay: 0.8,
-                duration: 0.8,
-                type: "tween",
+              animate: {
+                y: 0,
+                transition: {
+                  delay: 0.8,
+                  duration: 0.8,
+                  type: "tween",
+                },
               },
             }}
             onClick={() =>
@@ -93,11 +97,14 @@ function WelcomePage({ nextReference }: welcomePageProps) {
             buttonType="empty"
             animationProps={{
               initial: { x: 100 },
-              animate: { x: 0 },
-              transition: {
-                delay: 0.8,
-                duration: 0.8,
-                type: "tween",
+              animate: {
+                x: 0,
+
+                transition: {
+                  delay: 0.8,
+                  duration: 0.8,
+                  type: "tween",
+                },
               },
             }}
             onClick={() => handleRedirect("https://sdrrv.itch.io/")}
@@ -112,11 +119,13 @@ function WelcomePage({ nextReference }: welcomePageProps) {
         className="go-down-arrow"
         animationProps={{
           initial: { opacity: 0 },
-          animate: { opacity: 1 },
-          transition: {
-            delay: 1.5,
-            duration: 1.5,
-            type: "tween",
+          animate: {
+            opacity: 1,
+            transition: {
+              delay: 1.5,
+              duration: 1.5,
+              type: "tween",
+            },
           },
         }}
         onClick={handleGoNextPage}

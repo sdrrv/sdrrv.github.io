@@ -34,6 +34,9 @@ function Button({
   return (
     <motion.button
       {...animationProps}
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ duration: 0.1 }}
       type="button"
       onClick={onClick}
       className={className + " " + typeChecker(buttonType)}
