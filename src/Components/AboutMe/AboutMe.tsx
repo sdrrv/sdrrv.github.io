@@ -2,10 +2,15 @@ import "./AboutMe.component.scss";
 import selfImage from "../../assets/self1.png";
 import { calculateAge } from "../../scripts/ageCalculator";
 import { motion } from "framer-motion";
+import React, { MutableRefObject } from "react";
 
-function AboutMe() {
+type aboutMeProps = {
+  selfReference: MutableRefObject<null>;
+};
+
+function AboutMe({ selfReference }: aboutMeProps) {
   return (
-    <motion.section>
+    <motion.section ref={selfReference}>
       <div className="about-me">
         <div className="about-me_text">
           <h2>
