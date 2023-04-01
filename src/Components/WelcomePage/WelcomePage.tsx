@@ -3,6 +3,7 @@ import "./WelcomePage.component.scss";
 import { motion } from "framer-motion";
 import ReactTypingEffect from "react-typing-effect";
 import Button from "../Button/Button";
+import ScrollToButton from "../ScrollToButton/ScrollToButton";
 
 const titles = ["Software Engineer", "Developer", "Game Developer", "Student"];
 
@@ -11,12 +12,6 @@ type welcomePageProps = {
 };
 
 function WelcomePage({ nextReference }: welcomePageProps) {
-  function handleGoNextPage() {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    nextReference.current?.scrollIntoView({ behavior: "smooth" });
-  }
-
   function handleRedirect(url: string) {
     window.open(url);
   }
@@ -114,24 +109,7 @@ function WelcomePage({ nextReference }: welcomePageProps) {
         </motion.div>
       </div>
 
-      <Button
-        buttonType="empty"
-        className="go-down-arrow"
-        animationProps={{
-          initial: { opacity: 0 },
-          animate: {
-            opacity: 1,
-            transition: {
-              delay: 1.5,
-              duration: 1.5,
-              type: "tween",
-            },
-          },
-        }}
-        onClick={handleGoNextPage}
-      >
-        <i className="bi bi-arrow-down" />
-      </Button>
+      <ScrollToButton reference={nextReference} />
     </section>
   );
 }
