@@ -4,10 +4,13 @@ import Button from "../Button/Button";
 
 type ScrollToButtonProps = {
   reference: MutableRefObject<unknown>;
-  next: boolean; // True next, false previous
+  toPrevious?: boolean; // false next, true previous
 };
 
-function ScrollToButton({ reference, next }: ScrollToButtonProps) {
+function ScrollToButton({
+  reference,
+  toPrevious = false,
+}: ScrollToButtonProps) {
   function handleGoNextPage() {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
@@ -17,7 +20,7 @@ function ScrollToButton({ reference, next }: ScrollToButtonProps) {
   return (
     <Button
       buttonType="empty"
-      className="go-down-arrow"
+      className={toPrevious ? "go-up-arrow" : "go-down-arrow"}
       animationProps={{
         initial: { opacity: 0 },
         animate: {
@@ -31,7 +34,7 @@ function ScrollToButton({ reference, next }: ScrollToButtonProps) {
       }}
       onClick={handleGoNextPage}
     >
-      <i className="bi bi-arrow-down" />
+      <i className={toPrevious ? "bi bi-arrow-up" : "bi bi-arrow-down"} />
     </Button>
   );
 }
