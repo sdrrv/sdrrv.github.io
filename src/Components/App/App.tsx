@@ -6,12 +6,17 @@ import AboutMe from "../AboutMe/AboutMe";
 import { useRef } from "react";
 
 function App() {
+  const homeRef = useRef(null);
   const aboutMeRef = useRef(null);
   return (
     <>
       <ParticleBackground />
-      <WelcomePage nextReference={aboutMeRef} />
-      <AboutMe selfReference={aboutMeRef} />
+      <WelcomePage selfReference={homeRef} nextReference={aboutMeRef} />
+      <AboutMe
+        selfReference={aboutMeRef}
+        previousReference={homeRef}
+        nextReference={homeRef}
+      />
       <PopupMenu />
     </>
   );

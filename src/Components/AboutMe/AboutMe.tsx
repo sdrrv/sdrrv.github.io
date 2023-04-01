@@ -3,12 +3,19 @@ import selfImage from "../../assets/self1.png";
 import { calculateAge } from "../../scripts/ageCalculator";
 import { motion } from "framer-motion";
 import React, { MutableRefObject } from "react";
+import ScrollToButton from "../ScrollToButton/ScrollToButton";
 
 type aboutMeProps = {
   selfReference: MutableRefObject<null>;
+  previousReference: MutableRefObject<null>;
+  nextReference: MutableRefObject<null>;
 };
 
-function AboutMe({ selfReference }: aboutMeProps) {
+function AboutMe({
+  selfReference,
+  previousReference,
+  nextReference,
+}: aboutMeProps) {
   return (
     <motion.section ref={selfReference}>
       <div className="about-me">
@@ -40,6 +47,8 @@ function AboutMe({ selfReference }: aboutMeProps) {
 
         <img className="about-me_image" src={selfImage} alt="It's me!" />
       </div>
+      <ScrollToButton reference={previousReference} toPrevious={true} />
+      <ScrollToButton reference={nextReference} disabled={true} />
     </motion.section>
   );
 }
