@@ -8,15 +8,16 @@ import ScrollToButton from "../ScrollToButton/ScrollToButton";
 const titles = ["Software Engineer", "Developer", "Game Developer", "Student"];
 
 type welcomePageProps = {
+  selfReference: MutableRefObject<null>;
   nextReference: MutableRefObject<null>;
 };
 
-function WelcomePage({ nextReference }: welcomePageProps) {
+function WelcomePage({ selfReference, nextReference }: welcomePageProps) {
   function handleRedirect(url: string) {
     window.open(url);
   }
   return (
-    <section>
+    <section ref={selfReference}>
       <div className="welcome-page">
         <div className="title">
           <motion.h1
