@@ -5,11 +5,13 @@ import Button from "../Button/Button";
 type ScrollToButtonProps = {
   reference: MutableRefObject<unknown>;
   toPrevious?: boolean; // false next, true previous
+  disabled?: boolean;
 };
 
 function ScrollToButton({
   reference,
   toPrevious = false,
+  disabled = false,
 }: ScrollToButtonProps) {
   function handleGoNextPage() {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -19,6 +21,7 @@ function ScrollToButton({
 
   return (
     <Button
+      disabled={disabled}
       buttonType="empty"
       className={toPrevious ? "go-up-arrow" : "go-down-arrow"}
       animationProps={{

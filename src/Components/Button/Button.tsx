@@ -10,6 +10,7 @@ type ButtonProps = {
   onClick?: () => void;
   buttonType?: ButtonType;
   animationProps?: AnimationProps;
+  disabled?: boolean;
 };
 
 function typeChecker(type: ButtonType) {
@@ -30,6 +31,7 @@ function Button({
   onClick,
   buttonType,
   animationProps,
+  disabled = false,
 }: ButtonProps) {
   return (
     <motion.button
@@ -40,6 +42,7 @@ function Button({
       type="button"
       onClick={onClick}
       className={className + " " + typeChecker(buttonType)}
+      disabled={disabled}
     >
       {children}
     </motion.button>
