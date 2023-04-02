@@ -4,10 +4,12 @@ import PopupMenu from "../PopupMenu/PopupMenu";
 import WelcomePage from "../WelcomePage/WelcomePage";
 import AboutMe from "../AboutMe/AboutMe";
 import { useRef } from "react";
+import TimeLine from "../TimeLine/TimeLine";
 
 function App() {
   const homeRef = useRef(null);
   const aboutMeRef = useRef(null);
+  const timeLineRef = useRef(null);
   return (
     <>
       <ParticleBackground />
@@ -15,8 +17,9 @@ function App() {
       <AboutMe
         selfReference={aboutMeRef}
         previousReference={homeRef}
-        nextReference={homeRef}
+        nextReference={timeLineRef}
       />
+      <TimeLine selfReference={timeLineRef} />
       <PopupMenu />
     </>
   );

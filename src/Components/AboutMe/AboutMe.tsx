@@ -48,7 +48,7 @@ function AboutMe({
         <img className="about-me_image" src={selfImage} alt="It's me!" />
       </div>
       <ScrollToButton reference={previousReference} toPrevious={true} />
-      <ScrollToButton reference={nextReference} disabled={true} />
+      <ScrollToButton reference={nextReference} />
     </motion.section>
   );
 }
