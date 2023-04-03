@@ -25,15 +25,17 @@ function TimeLine({
       <section ref={selfReference} className="test">
         <ScrollToButton reference={previousReference} toPrevious={true} />
         <h2 className="timeline-title">
-          My Time-Line <i className="bi bi-hourglass timeline-title-icon" />
+          My Time-Line{" "}
+          <i className="bi bi-hourglass-split timeline-title-icon" />
         </h2>
         <div className="vl vl-first" />
       </section>
       <section>
-        <p>Hello</p>
+        <div className="vl" />
       </section>
       <section>
         <div className="vl vl-last" />
+        <ScrollToButton reference={nextReference} disabled={true} />
       </section>
     </>
   );
