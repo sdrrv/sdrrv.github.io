@@ -21,7 +21,7 @@ function AboutMe({
       <div className="about-me">
         <div className="about-me_text">
           <h2>
-            About me <i className="bi-file-person-fill" />
+            About me <i className="bi-file-person-fill about-me_text-icon" />
           </h2>
           <p>
             <b>Hello! </b>

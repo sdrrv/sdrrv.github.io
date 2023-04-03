@@ -22,12 +22,15 @@ function TimeLine({
 }: TimeLineProps) {
   return (
     <>
-      <section ref={selfReference}>
+      <section ref={selfReference} className="test">
         <ScrollToButton reference={previousReference} toPrevious={true} />
+        <h2 className="timeline-title">
+          My Time-Line <i className="bi bi-hourglass timeline-title-icon" />
+        </h2>
         <div className="vl vl-first" />
       </section>
       <section>
-        <div className="vl" />
+        <p>Hello</p>
       </section>
       <section>
         <div className="vl vl-last" />
