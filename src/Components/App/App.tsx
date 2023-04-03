@@ -19,7 +19,11 @@ function App() {
         previousReference={homeRef}
         nextReference={timeLineRef}
       />
-      <TimeLine selfReference={timeLineRef} />
+      <TimeLine
+        selfReference={timeLineRef}
+        previousReference={aboutMeRef}
+        nextReference={homeRef}
+      />
       <PopupMenu />
     </>
   );

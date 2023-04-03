@@ -3,19 +3,28 @@ import "./TimeLine.component.scss";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import ScrollToButton from "../ScrollToButton/ScrollToButton";
 
 type TimeLineProps = {
   selfReference: MutableRefObject<null>;
-  //previousReference: MutableRefObject<null>;
-  //nextReference: MutableRefObject<null>;
+  previousReference: MutableRefObject<null>;
+  nextReference: MutableRefObject<null>;
 };
 
-function TimeLine({ selfReference }: TimeLineProps) {
+function TimeLine({
+  selfReference,
+  previousReference,
+  nextReference,
+}: TimeLineProps) {
   return (
-    <section ref={selfReference}>
-      <VerticalTimeline>
+    <section className="timeline" ref={selfReference}>
+      <ScrollToButton reference={previousReference} toPrevious={true} />
+      <ScrollToButton reference={nextReference} disabled={true} />
+      <VerticalTimeline className="timeline-component test">
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}

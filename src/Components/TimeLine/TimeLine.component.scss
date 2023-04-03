@@ -1,0 +1,8 @@
+.timeline {
+  height: auto;
+  scroll-snap-type: none;
+  &-component {
+    margin-top: 30vh !important;
+    margin-bottom: 30vh !important;
+  }
+}
