@@ -1,8 +1,12 @@
-.timeline {
-  height: auto;
-  scroll-snap-type: none;
-  &-component {
-    margin-top: 30vh !important;
-    margin-bottom: 30vh !important;
+.vl {
+  border-left: 6px solid white;
+  height: 100%;
+  &-first {
+    border-radius: 20px 20px 0 0;
+    margin-top: 20vh;
+  }
+  &-last {
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 20vh;
   }
 }
