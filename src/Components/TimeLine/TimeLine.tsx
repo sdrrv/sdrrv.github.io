@@ -1,11 +1,5 @@
 import React, { MutableRefObject } from "react";
 import "./TimeLine.component.scss";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import ScrollToButton from "../ScrollToButton/ScrollToButton";
 
@@ -28,6 +22,11 @@ function TimeLine({
           My Time-Line{" "}
           <i className="bi bi-hourglass-split timeline-title-icon" />
         </h2>
+        <div className="timeline">
+          <div className="timeline_icon">
+            <i className="bi bi-google" />
+          </div>
+        </div>
         <div className="vl vl-first" />
       </section>
       <section>
