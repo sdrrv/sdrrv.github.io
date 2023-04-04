@@ -25,7 +25,6 @@
 
   &_icon {
     position: relative;
-    border: solid white 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,12 +38,20 @@
       margin-bottom: 10vh;
     }
 
-    font-size: 1.2em;
-    border-radius: 50%;
-    height: 3em;
-    width: 3em;
-    background-color: darkslateblue;
-    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    &_icon {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+
+      height: 3em;
+      width: 3em;
+      border: solid white 6px;
+      border-radius: 50%;
+      background-color: darkslateblue;
+      //box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
     &_date {
       position: absolute;
