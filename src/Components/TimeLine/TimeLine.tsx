@@ -2,6 +2,7 @@ import React, { MutableRefObject } from "react";
 import "./TimeLine.component.scss";
 import "react-vertical-timeline-component/style.min.css";
 import ScrollToButton from "../ScrollToButton/ScrollToButton";
+import TimeLineElement from "./TimeLineElement";
 
 type TimeLineProps = {
   selfReference: MutableRefObject<null>;
@@ -22,13 +23,30 @@ function TimeLine({
           Timeline <i className="bi bi-hourglass-split timeline-title-icon" />
         </h2>
         <div className="timeline">
-          <div className="timeline_icon">
-            <i className="bi bi-google" />
-            <div className="timeline_icon_date left">April 2020</div>
-          </div>
-          <div className="timeline_icon">
-            <i className="bi bi-google" />
-          </div>
+          <TimeLineElement
+            reversed={true}
+            iconNode={<i className="bi bi-google" />}
+            dateNode={
+              <>
+                Jul - Sep <b>2022</b>
+              </>
+            }
+          >
+            <h3> Star Wars Rules</h3>
+            <p>Hello there general Knob</p>
+          </TimeLineElement>
+
+          <TimeLineElement
+            iconNode={<i className="bi bi-google" />}
+            dateNode={
+              <>
+                Jul - Sep <b>2022</b>
+              </>
+            }
+          >
+            <h3> Star Wars Rules</h3>
+            <p>Hello there general Knob</p>
+          </TimeLineElement>
         </div>
         <div className="vl vl-first" />
       </section>
