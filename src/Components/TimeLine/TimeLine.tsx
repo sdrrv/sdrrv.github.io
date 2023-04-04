@@ -19,10 +19,13 @@ function TimeLine({
       <section ref={selfReference} className="test">
         <ScrollToButton reference={previousReference} toPrevious={true} />
         <h2 className="timeline-title">
-          My Time-Line{" "}
-          <i className="bi bi-hourglass-split timeline-title-icon" />
+          Timeline <i className="bi bi-hourglass-split timeline-title-icon" />
         </h2>
         <div className="timeline">
+          <div className="timeline_icon">
+            <i className="bi bi-google" />
+            <div className="timeline_icon_date left">April 2020</div>
+          </div>
           <div className="timeline_icon">
             <i className="bi bi-google" />
           </div>
