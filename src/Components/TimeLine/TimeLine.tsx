@@ -67,18 +67,27 @@ function TimeLine({
       <section>
         <div className="timeline">
           <TimeLineElement
-            color="#589CDD"
+            color="#D87868"
             reversed={true}
-            iconNode={<TecnicoSVG />}
+            iconNode={<div className="gympass-icon">G</div>}
             dateNode={
               <>
-                Jul <b>2022</b>
+                Jul - Sep <b>2020</b>
               </>
             }
           >
-            <h3> Instituto Superior Técnico </h3>
-            <h4> Computer Science & Software Engineering</h4>
-            <p>Will finish his degree 🎓 </p>
+            <h3>
+              Internship @ <a href="https://www.gympass.com">Gympass</a>
+            </h3>
+            <h4>Worked as developer during the summer</h4>
+            <p>
+              I coded an open-source{" "}
+              <a href="https://github.com/sdrrv/elasticsearch-rescore-redis">
+                plugin
+              </a>{" "}
+              using <a>Java</a> that improved the search results of the Gympass
+              app by personalizing them to each user.
+            </p>
           </TimeLineElement>
           <TimeLineElement
             color="#589CDD"
@@ -146,13 +155,17 @@ function TimeLine({
                 />
               </svg>
             }
-            dateNode={<b>2011</b>}
+            dateNode={
+              <>
+                <b>2011</b> - <b>Forever</b>
+              </>
+            }
           >
             <h3> How it all started... </h3>
             <p>
-              I developed an interest in coding when i was 11y , and soon began
-              began experimenting with <a>Python</a> to create small programs
-              and games.
+              I developed an interest in coding when i was 11y, and soon began
+              experimenting with <a>Python</a> to create small programs and
+              games.
             </p>
             <p>
               This early exposure to programming sparked my passion for

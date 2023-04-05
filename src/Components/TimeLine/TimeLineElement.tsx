@@ -30,7 +30,10 @@ function TimeLineElement({
       <div className={"timeline_icon_date " + (reversed ? "left" : "right")}>
         {dateNode}
       </div>
-      <div className={"timeline_icon_content " + (reversed ? "right" : "left")}>
+      <div
+        className={"timeline_icon_content " + (reversed ? "right" : "left")}
+        style={{ border: "solid 5px " + color }}
+      >
         {children}
       </div>
     </motion.div>
