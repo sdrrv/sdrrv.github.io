@@ -153,7 +153,14 @@ function TimeLine({
               Was a finalist at the competition{" "}
               <a href="https://www.appsforgood.org/">Apps for Good</a>
             </h4>
-            <p>Will finish his degree 🎓 </p>
+            <p>
+              A.F.G is a national program financed by{" "}
+              <a href="https://cdi.org.pt/">CDI Portugal</a>.
+            </p>
+            <p>
+              Me and my team got to the final with our project{" "}
+              <a>Distractionless</a>.
+            </p>
           </TimeLineElement>
 
           <TimeLineElement
