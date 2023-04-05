@@ -65,6 +65,49 @@ function TimeLine({
         <div className="vl vl-first" />
       </section>
       <section>
+        <div className="timeline">
+          <TimeLineElement
+            color="#589CDD"
+            reversed={true}
+            iconNode={<TecnicoSVG />}
+            dateNode={
+              <>
+                Jul <b>2022</b>
+              </>
+            }
+          >
+            <h3> Instituto Superior Técnico </h3>
+            <h4> Computer Science & Software Engineering</h4>
+            <p>Will finish his degree 🎓 </p>
+          </TimeLineElement>
+          <TimeLineElement
+            color="#589CDD"
+            iconNode={<TecnicoSVG />}
+            dateNode={
+              <>
+                Jul <b>2022</b>
+              </>
+            }
+          >
+            <h3> Instituto Superior Técnico </h3>
+            <h4> Computer Science & Software Engineering</h4>
+            <p>Will finish his degree 🎓 </p>
+          </TimeLineElement>
+          <TimeLineElement
+            color="#589CDD"
+            reversed={true}
+            iconNode={<TecnicoSVG />}
+            dateNode={
+              <>
+                Jul <b>2022</b>
+              </>
+            }
+          >
+            <h3> Instituto Superior Técnico </h3>
+            <h4> Computer Science & Software Engineering</h4>
+            <p>Will finish his degree 🎓 </p>
+          </TimeLineElement>
+        </div>
         <div className="vl" />
       </section>
       <section>
