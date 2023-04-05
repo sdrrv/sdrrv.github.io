@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { CSSProperties } from "react";
+import React from "react";
 import "./TimeLine.component.scss";
 
 type TimeLineElementProps = {
