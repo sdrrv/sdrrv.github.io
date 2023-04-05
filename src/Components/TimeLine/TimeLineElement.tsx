@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { CSSProperties } from "react";
 import "./TimeLine.component.scss";
 
 type TimeLineElementProps = {
@@ -7,6 +7,7 @@ type TimeLineElementProps = {
   reversed?: boolean;
   dateNode?: React.ReactNode;
   iconNode?: React.ReactNode;
+  color?: string;
 };
 
 function TimeLineElement({
@@ -14,13 +15,14 @@ function TimeLineElement({
   dateNode,
   children,
   iconNode,
+  color,
 }: TimeLineElementProps) {
   return (
     <motion.div className="timeline_icon">
       <motion.div
         className="timeline_icon_icon"
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 1 }}
+        style={{ backgroundColor: color ? color : "darkslateblue" }}
+        whileHover={{ scale: 1.15 }}
         transition={{ duration: 0.1 }}
       >
         {iconNode}

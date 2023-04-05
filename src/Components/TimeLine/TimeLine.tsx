@@ -3,6 +3,7 @@ import "./TimeLine.component.scss";
 import "react-vertical-timeline-component/style.min.css";
 import ScrollToButton from "../ScrollToButton/ScrollToButton";
 import TimeLineElement from "./TimeLineElement";
+import TecnicoSVG from "../../assets/TecnicoSVG";
 
 type TimeLineProps = {
   selfReference: MutableRefObject<null>;
@@ -17,15 +18,16 @@ function TimeLine({
 }: TimeLineProps) {
   return (
     <>
-      <section ref={selfReference} className="test">
+      <section ref={selfReference}>
         <ScrollToButton reference={previousReference} toPrevious={true} />
         <h2 className="timeline-title">
           Timeline <i className="bi bi-hourglass-split timeline-title-icon" />
         </h2>
         <div className="timeline">
           <TimeLineElement
+            color="#589CDD"
             reversed={true}
-            iconNode={<i className="bi bi-google" />}
+            iconNode={<TecnicoSVG />}
             dateNode={
               <>
                 Jul - Sep <b>2022</b>
@@ -40,7 +42,7 @@ function TimeLine({
             iconNode={<i className="bi bi-google" />}
             dateNode={
               <>
-                Jul - Sep <b>2022</b>
+                Jul - Sep <b>2021</b>
               </>
             }
           >
