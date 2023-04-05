@@ -36,7 +36,7 @@ function TimeLine({
           >
             <h3> Instituto Superior Técnico </h3>
             <h4> Computer Science & Software Engineering</h4>
-            <p>Will finish his degree 🎓 </p>
+            <p>Will finish my degree 🎓 </p>
           </TimeLineElement>
 
           <TimeLineElement
