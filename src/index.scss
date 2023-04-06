@@ -56,4 +56,6 @@ h2 {
 html {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 5s ease-in-out;
 }
